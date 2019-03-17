@@ -1,0 +1,18 @@
+Package: seeds
+Type: Package
+Title: Generate or Plot seeds
+Version: 0.1.0
+Author: chroneru
+Maintainer: chroneru <yourself@somewhere.net>
+Description: Create seeds(data.frame, or tibble) and Plot.
+    preffix(seeds) mean create object.
+    preffix(plot) mean ggplot.
+    suffix(df) return data.frame.
+    suffix(tibble) return tibble.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests: testthat
+RoxygenNote: 6.1.1
+Imports: ggplot2,
+    tibble
