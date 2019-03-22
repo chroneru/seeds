@@ -43,6 +43,13 @@ SEXP seeds_ellipse_init(
 SEXP seeds_ellipse(
     SEXP a,
     SEXP b) {
+    // check integer
+    if(seeds_check(a)) {
+        a = coerceVector(a, REALSXP);
+    }
+    if(seeds_check(b)) {
+        b = coerceVector(b, REALSXP);
+    }
 
     SEXP ellipse;
 
