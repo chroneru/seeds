@@ -5,6 +5,16 @@ SEXP seeds_rose(
         SEXP a,
         SEXP nsin,
         SEXP k) {
+    // check integer
+    if(seeds_check(a)) {
+        a = coerceVector(a, REALSXP);
+    }
+    if(seeds_check(nsin)) {
+        nsin = coerceVector(nsin, REALSXP);
+    }
+    if(seeds_check(k)) {
+        k = coerceVector(k, REALSXP);
+    }
 
     int nprot = 0;
 

@@ -43,6 +43,11 @@ SEXP seeds_cycl_init(
 }
 
 SEXP seeds_cycl(SEXP radius_m) {
+    //check integer
+    if(seeds_check(radius_m)) {
+        radius_m = coerceVector(radius_m, REALSXP);
+    }
+
     SEXP cycl;
 
     SEXP radius_c;
@@ -60,6 +65,13 @@ SEXP seeds_cycl(SEXP radius_m) {
 }
 
 SEXP seeds_epicycl(SEXP radius_c, SEXP radius_m) {
+    // check integer
+    if(seeds_check(radius_c)) {
+        radius_c = coerceVector(radius_c, REALSXP);
+    }
+    if(seeds_check(radius_m)) {
+        radius_m = coerceVector(radius_m, REALSXP);
+    }
 
     SEXP cycl;
 
@@ -74,6 +86,13 @@ SEXP seeds_epicycl(SEXP radius_c, SEXP radius_m) {
 }
 
 SEXP seeds_hypocycl(SEXP radius_c, SEXP radius_m) {
+    // check integer
+    if(seeds_check(radius_c)) {
+        radius_c = coerceVector(radius_c, REALSXP);
+    }
+    if(seeds_check(radius_m)) {
+        radius_m = coerceVector(radius_m, REALSXP);
+    }
 
     SEXP cycl;
 
