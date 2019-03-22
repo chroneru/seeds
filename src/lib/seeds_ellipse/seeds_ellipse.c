@@ -28,8 +28,8 @@ SEXP seeds_ellipse_init(
 
     for(int i = 0; i < ellipse_row; i++) {
 
-        REAL(ellipse_x)[i] = sin(start) * *ellipse_a;
-        REAL(ellipse_y)[i] = cos(start) * *ellipse_b;
+        REAL(ellipse_x)[i] = cos(start) * *ellipse_a;
+        REAL(ellipse_y)[i] = sin(start) * *ellipse_b;
 
         start = start + plus;
     }

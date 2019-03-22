@@ -11,6 +11,10 @@ extern SEXP seeds_circle(SEXP);
 extern SEXP seeds_cycl(SEXP);
 extern SEXP seeds_epicycl(SEXP, SEXP);
 extern SEXP seeds_hypocycl(SEXP, SEXP);
+/* seeds_pascal */
+extern SEXP seeds_pascal(SEXP, SEXP);
+
+extern SEXP seeds_descartes(SEXP);
 
 static const R_CallMethodDef r_callables[] = {
     {"seeds_param", (DL_FUNC) &seeds_param, 5},
@@ -22,6 +26,9 @@ static const R_CallMethodDef r_callables[] = {
     {"seeds_cycl", (DL_FUNC) &seeds_cycl, 1},
     {"seeds_epicycl", (DL_FUNC) &seeds_epicycl, 2},
     {"seeds_hypocycl", (DL_FUNC) &seeds_hypocycl, 2},
+    {"seeds_pascal", (DL_FUNC) &seeds_pascal, 2},
+
+    {"seeds_descartes", (DL_FUNC) &seeds_descartes, 1},
     {NULL, NULL, 0}
 };
 

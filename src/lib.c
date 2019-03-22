@@ -10,3 +10,6 @@
 
 #include "lib/seeds_cycl/seeds_cycl.c"
 #include "lib/seeds_cycl/seeds_cycl_calc.c"
+#include "lib/seeds_pascal/seeds_pascal.c"
+
+#include "lib/seeds_descartes/seeds_descartes.c"
