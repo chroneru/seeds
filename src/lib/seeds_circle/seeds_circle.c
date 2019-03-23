@@ -1,27 +1,12 @@
 
 #include <R.h>
-#include <Rdefines.h>
-#include <Rinternals.h>
 #include <Rmath.h>
 #include "seeds_circle.h"
 
 SEXP seeds_circle(SEXP radius) {
-    /* // check integer
-    if(TYPEOF(radius) == INTSXP) {
-        warning("this argument is integer, coerce numeric!");
-
-        radius = AS_NUMERIC(radius);
-    }
-    */
-
-    // check numeric
-    if(TYPEOF(radius) != REALSXP) {
-        error("argument is not numeric.");
-    }
-
-    // check one-size
-    if(length(radius) != 1) {
-        warning("this argument is not an element!");
+    // check integer
+    if(seeds_check(radius)) {
+        radius = coerceVector(radius, REALSXP);
     }
 
     SEXP circ;

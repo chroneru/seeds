@@ -1,7 +1,10 @@
 #ifndef _SEEDS_CIRCLE_H_
 #define _SEEDS_CIRCLE_H_
 
-/* get_df/get_df.c */
+/* seeds_check */
+extern int seeds_check(SEXP);
+
+/* get_df */
 extern SEXP get_df_class(void);
 extern SEXP get_df_rownames(int);
 extern SEXP get_df_colnames(int);

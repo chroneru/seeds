@@ -12,8 +12,6 @@ SEXP seeds_ellipse_init(
     ellipse_a = REAL(a);
     ellipse_b = REAL(b);
 
-    int len = 100;
-
     int ellipse_row = 100;
     int ellipse_col = 2;
 
@@ -28,10 +26,10 @@ SEXP seeds_ellipse_init(
     ellipse_y = PROTECT( allocVector(REALSXP, ellipse_row) ); nprot++;
     ellipse = PROTECT( allocVector(VECSXP, ellipse_col) ); nprot++;
 
-    for(int i = 0; i < len; i++) {
+    for(int i = 0; i < ellipse_row; i++) {
 
-        REAL(ellipse_x)[i] = sin(start) * *ellipse_a;
-        REAL(ellipse_y)[i] = cos(start) * *ellipse_b;
+        REAL(ellipse_x)[i] = cos(start) * *ellipse_a;
+        REAL(ellipse_y)[i] = sin(start) * *ellipse_b;
 
         start = start + plus;
     }
@@ -45,6 +43,13 @@ SEXP seeds_ellipse_init(
 SEXP seeds_ellipse(
     SEXP a,
     SEXP b) {
+    // check integer
+    if(seeds_check(a)) {
+        a = coerceVector(a, REALSXP);
+    }
+    if(seeds_check(b)) {
+        b = coerceVector(b, REALSXP);
+    }
 
     SEXP ellipse;
 

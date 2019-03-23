@@ -1,5 +1,5 @@
-#ifndef _SEEDS_ELLIPSE_H_
-#define _SEEDS_ELLIPSE_H_
+#ifndef _SEEDS_DESCARTES_H_
+#define _SEEDS_DESCARTES_H_
 
 /* seeds_check */
 extern int seeds_check(SEXP);
@@ -11,7 +11,8 @@ extern SEXP get_df_colnames(int);
 
 #include <Rinternals.h>
 
-SEXP seeds_ellipse_init(SEXP, SEXP);
-SEXP seeds_ellipse(SEXP, SEXP);
+SEXP seeds_descartes_init(SEXP);
+double seeds_descartes_calc(double, double);
+SEXP seeds_descartes(SEXP);
 
 #endif

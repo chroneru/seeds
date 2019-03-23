@@ -1,7 +1,10 @@
 #ifndef _SEEDS_PARAM_H_
 #define _SEEDS_PARAM_H_
 
-/* get_df.h */
+/* seeds_check */
+extern int seeds_check(SEXP);
+
+/* get_df */
 extern SEXP get_df_class();
 extern SEXP get_df_rownames(int);
 extern SEXP get_df_colnames(int);
