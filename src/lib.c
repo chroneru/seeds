@@ -13,3 +13,5 @@
 #include "lib/seeds_pascal/seeds_pascal.c"
 
 #include "lib/seeds_descartes/seeds_descartes.c"
+
+#include "lib/seeds_log_spiral/seeds_log_spiral.c"

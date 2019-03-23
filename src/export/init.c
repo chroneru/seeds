@@ -16,6 +16,8 @@ extern SEXP seeds_pascal(SEXP, SEXP);
 
 extern SEXP seeds_descartes(SEXP);
 
+extern SEXP seeds_log_spiral(SEXP, SEXP);
+
 static const R_CallMethodDef r_callables[] = {
     {"seeds_param", (DL_FUNC) &seeds_param, 5},
     {"seeds_rose", (DL_FUNC) &seeds_rose, 3},
@@ -29,6 +31,8 @@ static const R_CallMethodDef r_callables[] = {
     {"seeds_pascal", (DL_FUNC) &seeds_pascal, 2},
 
     {"seeds_descartes", (DL_FUNC) &seeds_descartes, 1},
+
+    {"seeds_log_spiral", (DL_FUNC) &seeds_log_spiral, 2},
     {NULL, NULL, 0}
 };
 
